@@ -1,0 +1,296 @@
+/**
+ * Custom CSS for Elementor Editor and Frontend
+ *
+ * @package OnePage_Minimal
+ */
+
+/* ==========================================================================
+   ELEMENTOR EDITOR STYLES
+   ========================================================================== */
+
+/* Global Elementor Resets */
+.elementor-page {
+    overflow-x: hidden;
+}
+
+.elementor-page .site-header {
+    position: relative !important;
+    z-index: 100;
+}
+
+.elementor-edit-area {
+    outline: none;
+}
+
+/* Ensure full-width sections */
+.elementor-section-wrap {
+    max-width: 100% !important;
+}
+
+/* Container width for Elementor */
+.elementor-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   ELEMENTOR WIDGET COMMON STYLES
+   ========================================================================== */
+
+/* Heading Widget */
+.elementor-heading-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Button Widget */
+.elementor-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.elementor-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.elementor-button-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+/* Icon Widget */
+.elementor-icon {
+    text-align: center;
+}
+
+.elementor-icon i {
+    transition: transform 0.3s ease;
+}
+
+.elementor-icon:hover i {
+    transform: scale(1.1);
+}
+
+/* ==========================================================================
+   ELEMENTOR SECTION STYLES
+   ========================================================================== */
+
+/* Full Height Sections */
+.elementor-section-height-viewport {
+    min-height: 100vh;
+}
+
+/* Internal Sections */
+.elementor-inner-section {
+    margin: 0;
+}
+
+/* ==========================================================================
+   ELEMENTOR COLUMN STYLES
+   ========================================================================== */
+
+.elementor-column {
+    position: relative;
+}
+
+.elementor-column-wrap {
+    height: 100%;
+}
+
+/* ==========================================================================
+   ELEMENTOR IMAGE CAROUSEL / GALLERY
+   ========================================================================== */
+
+.elementor-image-carousel .swiper-button-next,
+.elementor-image-carousel .swiper-button-prev {
+    background: var(--primary-color, #2563eb);
+    color: #ffffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+/* ==========================================================================
+   ELEMENTOR TESTIMONIAL CAROUSEL
+   ========================================================================== */
+
+.elementor-testimonial-wrapper {
+    text-align: center;
+}
+
+.elementor-testimonial-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #4b5563;
+}
+
+/* ==========================================================================
+   ELEMENTOR PRICE TABLE
+   ========================================================================== */
+
+.elementor-price-table {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.elementor-price-table:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   ELEMENTOR FORMS
+   ========================================================================== */
+
+.elementor-field-group {
+    margin-bottom: 1.5rem;
+}
+
+.elementor-field-group .elementor-field {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.elementor-field-group .elementor-field:focus {
+    outline: none;
+    border-color: var(--primary-color, #2563eb);
+}
+
+.elementor-field-group .elementor-field-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.elementor-button.elementor-size-md {
+    padding: 14px 28px;
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   ELEMENTOR VIDEO PLAYER
+   ========================================================================== */
+
+.elementor-video-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   ELEMENTOR DIVIDER
+   ========================================================================== */
+
+.elementor-divider-separator {
+    border-color: #e5e7eb;
+}
+
+/* ==========================================================================
+   ELEMENTOR SOCIAL ICONS
+   ========================================================================== */
+
+.elementor-social-icon {
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.elementor-social-icon:hover {
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   RESPONSIVE STYLES
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .elementor-container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .elementor-button.elementor-size-md {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .elementor-price-table {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .elementor-field-group {
+        margin-bottom: 1rem;
+    }
+}
+
+/* ==========================================================================
+   ELEMENTOR EDITOR SPECIFIC
+   ========================================================================== */
+
+/* Editor Loading State */
+.elementor-loading-overlay {
+    background: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Preview Mode */
+.elementor-preview-mode .site-header {
+    position: relative !important;
+}
+
+/* ==========================================================================
+   THEME COMPATIBILITY
+   ========================================================================== */
+
+/* Remove theme padding in Elementor pages */
+.elementor-page #page {
+    padding-top: 0;
+}
+
+.elementor-page .site-content {
+    padding: 0;
+}
+
+/* Elementor content width */
+.elementor-content-wrapper {
+    max-width: 100%;
+}
+
+/* Full width for Elementor sections */
+.elementor-page .elementor-section:not(.elementor-inner-section) {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* ==========================================================================
+   PRINT STYLES FOR ELEMENTOR
+   ========================================================================== */
+
+@media print {
+    .elementor-column,
+    .elementor-section {
+        page-break-inside: avoid;
+    }
+
+    .elementor-button {
+        border: 1px solid #000;
+        color: #000;
+        background: none;
+    }
+}
