@@ -1,16 +1,232 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Casa en Venta en El Mirador, Uruapan | ACI Grupo Inmobiliario</title>
-    <meta name="description" content="Descubre esta hermosa propiedad con amplios espacios y excelente distribución en El Mirador, Uruapan. 3 recámaras, 3.5 baños, cochera para 2 autos." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Enfrentando una Prueba Difícil — Ebook de Superación Personal</title>
+<meta name="description" content="Descubre las herramientas para superar cualquier obstáculo. Ebook con estrategias probadas para transformar la adversidad en crecimiento personal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF9F7; --fg:#15202B; --card:#F5F1EA; --muted:#6B7280;
+    --primary:#D17A1F; --primary-2:#F2B650; --accent:#F2B650;
+    --secondary:#1A2744; --secondary-fg:#F5F1EA; --border:#E5DCCB;
+    --radius:14px;
+    --hero-gradient:linear-gradient(135deg,#152040 0%,#243558 50%,#7A4A1F 100%);
+    --warm-glow:0 8px 32px -8px rgba(209,122,31,.35);
+    --text-gradient:linear-gradient(135deg,#D17A1F,#F2B650);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Source Sans 3",system-ui,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:"Playfair Display",Georgia,serif;font-weight:700;line-height:1.2}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:600;padding:1rem 2rem;border-radius:var(--radius);transition:all .3s;cursor:pointer;border:2px solid transparent;font-size:1.05rem;font-family:inherit}
+  .btn-cta{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;box-shadow:var(--warm-glow)}
+  .btn-cta:hover{transform:translateY(-2px);box-shadow:0 12px 36px -8px rgba(209,122,31,.5)}
+  .btn-outline{background:transparent;border-color:var(--accent);color:var(--accent)}
+  .btn-outline:hover{background:var(--accent);color:var(--secondary)}
+  .text-gradient{background:var(--text-gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* HERO */
+  .hero{background:var(--hero-gradient);color:var(--secondary-fg);position:relative;overflow:hidden;min-height:90vh;display:flex;align-items:center;padding:5rem 0}
+  .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(120px);opacity:.15;pointer-events:none}
+  .hero::before{width:300px;height:300px;background:var(--accent);top:10%;left:5%}
+  .hero::after{width:400px;height:400px;background:var(--primary);bottom:10%;right:5%}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center;position:relative;z-index:1}
+  @media(min-width:1024px){.hero-grid{grid-template-columns:1fr 1fr}}
+  .badge{display:inline-block;padding:.4rem 1rem;border-radius:999px;background:rgba(209,122,31,.2);color:var(--accent);font-size:.875rem;font-weight:500}
+  .hero h1{font-size:clamp(2.25rem,5vw,3.75rem);margin:1.5rem 0}
+  .hero p.lead{font-size:1.15rem;opacity:.85;max-width:520px;margin-bottom:2rem}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:1.5rem;font-size:.9rem;opacity:.75}
+  .hero-img{display:flex;justify-content:center}
+  .hero-img img{width:min(380px,80%);filter:drop-shadow(0 25px 40px rgba(0,0,0,.4));animation:float 6s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+  /* SECTIONS */
+  section{padding:6rem 0}
+  .section-alt{background:#F0E9DC}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 4rem}
+  .section-head h2{font-size:clamp(1.75rem,3.5vw,2.5rem);margin-bottom:1rem}
+  .section-head p{color:var(--muted);font-size:1.1rem}
+
+  /* BENEFITS */
+  .benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+  .benefit{padding:2rem;border-radius:var(--radius);background:var(--card);border:1px solid var(--border);transition:all .3s}
+  .benefit:hover{border-color:rgba(209,122,31,.3);box-shadow:var(--warm-glow);transform:translateY(-4px)}
+  .benefit .icon{width:56px;height:56px;border-radius:12px;background:rgba(209,122,31,.12);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;font-size:1.75rem}
+  .benefit h3{font-size:1.25rem;margin-bottom:.5rem}
+  .benefit p{color:var(--muted)}
+
+  /* TESTIMONIALS */
+  .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+  .testimonial{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:2rem}
+  .stars{color:var(--accent);margin-bottom:1rem;font-size:1.1rem;letter-spacing:2px}
+  .testimonial blockquote{font-style:italic;color:#374151;margin-bottom:1.25rem;line-height:1.7}
+  .testimonial .name{font-weight:700}
+  .testimonial .role{color:var(--muted);font-size:.9rem}
+
+  /* FAQ */
+  .faq-wrap{max-width:760px;margin:0 auto}
+  details{border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:.75rem;background:var(--bg);transition:border-color .2s}
+  details[open]{border-color:rgba(209,122,31,.3)}
+  summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:1.5rem;color:var(--primary);transition:transform .2s;font-weight:300}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{color:var(--muted);margin-top:1rem;line-height:1.7}
+
+  /* CTA */
+  .cta-section{background:var(--hero-gradient);color:var(--secondary-fg);position:relative;overflow:hidden}
+  .cta-card{max-width:960px;margin:0 auto;background:rgba(255,255,255,.05);backdrop-filter:blur(8px);border:1px solid rgba(245,241,234,.1);border-radius:24px;padding:3rem;display:flex;flex-direction:column;align-items:center;gap:2.5rem;text-align:center}
+  @media(min-width:768px){.cta-card{flex-direction:row;text-align:left}}
+  .cta-card img{width:200px;flex-shrink:0;filter:drop-shadow(0 15px 30px rgba(0,0,0,.3))}
+  .cta-card h2{font-size:clamp(1.75rem,3vw,2.5rem);margin-bottom:1.25rem}
+  .cta-card ul{list-style:none;margin-bottom:1.5rem}
+  .cta-card ul li{display:flex;align-items:center;gap:.75rem;margin-bottom:.6rem;opacity:.9}
+  .cta-card ul li::before{content:"✓";color:var(--accent);font-weight:700}
+  .price{display:flex;align-items:baseline;gap:.75rem;margin-bottom:1.5rem;justify-content:center;flex-wrap:wrap}
+  @media(min-width:768px){.price{justify-content:flex-start}}
+  .price .now{font-size:2.5rem;font-weight:700;color:var(--accent);font-family:"Playfair Display",serif}
+  .price .old{text-decoration:line-through;opacity:.5}
+  .price .off{background:rgba(242,182,80,.2);color:var(--accent);padding:.25rem .75rem;border-radius:999px;font-size:.85rem;font-weight:600}
+  .cta-note{font-size:.85rem;opacity:.6;margin-top:1rem}
+
+  /* FOOTER */
+  footer{background:var(--secondary);color:rgba(245,241,234,.6);text-align:center;padding:3rem 0;font-size:.9rem}
+  footer .brand{font-family:"Playfair Display",serif;font-size:1.15rem;font-weight:700;color:var(--secondary-fg);margin-bottom:.75rem}
+  footer .links{display:flex;justify-content:center;gap:1.5rem;margin-top:1rem}
+  footer a:hover{color:var(--secondary-fg)}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">📖 Nuevo Ebook Disponible</span>
+      <h1>Enfrentando una <span class="text-gradient">prueba difícil</span></h1>
+      <p class="lead">Descubre las herramientas y estrategias que te permitirán superar cualquier obstáculo y transformar los momentos más difíciles en oportunidades de crecimiento personal.</p>
+      <div class="hero-actions">
+        <a class="btn btn-cta" href="https://pay.hotmart.com/J104759897C">Obtener mi eBook — $89.00</a>
+        <a class="btn btn-outline" href="#contenido">Ver contenido</a>
+      </div>
+      <div class="hero-meta">
+        <span>⭐⭐⭐⭐⭐ 4.9/5</span>
+        <span>+2,500 lectores</span>
+        <span>📱 PDF + EPUB</span>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="ebook-cover.png" alt="Portada del ebook Enfrentando una prueba difícil">
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section id="contenido">
+  <div class="container">
+    <div class="section-head">
+      <h2>¿Qué encontrarás en este libro?</h2>
+      <p>Más que un libro, es una guía de transformación personal diseñada para acompañarte en tus momentos más desafiantes.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit"><div class="icon">🛡️</div><h3>Resiliencia inquebrantable</h3><p>Aprende a mantenerte firme incluso cuando todo parece derrumbarse.</p></div>
+      <div class="benefit"><div class="icon">❤️</div><h3>Sanación emocional</h3><p>Técnicas probadas para procesar el dolor y recuperar tu paz interior.</p></div>
+      <div class="benefit"><div class="icon">💡</div><h3>Claridad mental</h3><p>Estrategias para tomar decisiones acertadas en momentos de crisis.</p></div>
+      <div class="benefit"><div class="icon">📈</div><h3>Crecimiento personal</h3><p>Transforma cada adversidad en un escalón hacia tu mejor versión.</p></div>
+      <div class="benefit"><div class="icon">📖</div><h3>Guía paso a paso</h3><p>Un camino claro con ejercicios prácticos para aplicar cada día.</p></div>
+      <div class="benefit"><div class="icon">👥</div><h3>Historias reales</h3><p>Testimonios inspiradores de personas que superaron lo imposible.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Lo que dicen nuestros lectores</h2>
+      <p>Miles de personas ya han transformado su vida con esta guía.</p>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Este libro llegó a mi vida en el momento exacto. Las herramientas que ofrece me ayudaron a superar una de las etapas más difíciles que he vivido. Lo recomiendo con todo mi corazón."</blockquote>
+        <p class="name">María González</p><p class="role">Emprendedora</p>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Cada capítulo es una revelación. No es un libro más de autoayuda, es una guía práctica que realmente funciona. Lo he releído tres veces y cada vez descubro algo nuevo."</blockquote>
+        <p class="name">Carlos Ramírez</p><p class="role">Profesor universitario</p>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Después de perder mi empleo pensé que todo había terminado. Este ebook me dio la fuerza y la perspectiva que necesitaba para reinventarme. Hoy tengo mi propio negocio."</blockquote>
+        <p class="name">Ana Lucía Torres</p><p class="role">Diseñadora</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Preguntas frecuentes</h2>
+      <p>Resolvemos tus dudas antes de dar el siguiente paso.</p>
+    </div>
+    <div class="faq-wrap">
+      <details><summary>¿En qué formato recibiré el ebook?</summary><p>Recibirás el ebook en formato PDF y EPUB, compatibles con cualquier dispositivo: celular, tablet, computadora o lector electrónico.</p></details>
+      <details><summary>¿Es un libro religioso?</summary><p>Es un libro de superación personal que puede complementar cualquier creencia. Se enfoca en herramientas prácticas y psicológicas para enfrentar momentos difíciles.</p></details>
+      <details><summary>¿Cuánto tiempo toma leerlo?</summary><p>El libro tiene aproximadamente 180 páginas. Puedes leerlo en 3-4 horas, pero te recomendamos tomarte tu tiempo con los ejercicios prácticos de cada capítulo.</p></details>
+      <details><summary>¿Tiene garantía de devolución?</summary><p>Sí, ofrecemos una garantía de satisfacción de 30 días. Si el libro no cumple tus expectativas, te devolvemos el 100% de tu dinero sin preguntas.</p></details>
+      <details><summary>¿Puedo regalarlo a alguien?</summary><p>¡Por supuesto! Después de la compra recibirás los archivos que puedes compartir con quien lo necesite. También puedes adquirir licencias adicionales a precio especial.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="comprar">
+  <div class="container">
+    <div class="cta-card">
+      <img src="ebook-cover.png" alt="Ebook Enfrentando una prueba difícil">
+      <div>
+        <h2>Comienza tu transformación hoy</h2>
+        <ul>
+          <li>Ebook completo (PDF)</li>
+          <li>Guía de ejercicios prácticos</li>
+          <li>Acceso a actualizaciones futuras</li>
+          <li>Comunidad privada de lectores</li>
+          <li>Garantía de 7 días</li>
+        </ul>
+        <div class="price">
+          <span class="now">$89.00</span>
+          <span class="old">$110.00</span>
+          <span class="off">-60%</span>
+        </div>
+        <a class="btn btn-cta" href="https://pay.hotmart.com/J104759897C" style="width:100%;max-width:320px">Descargar ahora</a>
+        <p class="cta-note">Pago seguro • Descarga instantánea • Garantía 30 días</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p class="brand">Enfrentando una prueba difícil</p>
+    <p>© <span id="y"></span> Todos los derechos reservados.</p>
+    <div class="links">
+      <a href="#">Términos</a><a href="#">Privacidad</a><a href="#">Contacto</a>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
 </html>
